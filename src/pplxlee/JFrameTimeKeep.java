@@ -173,7 +173,7 @@ public class JFrameTimeKeep extends JFrame {
 					isPressed = false;
 					busy = false;
 					System.out.println("ки©╙");
-					state = STATE_DARG;
+					state = STATE_DIZZY;
 					imageIndex = 0;
 				}
 
