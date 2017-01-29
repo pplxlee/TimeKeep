@@ -1,6 +1,7 @@
 package pplxlee;
 
 import java.awt.Color;
+import java.awt.Dialog;
 import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -286,14 +287,13 @@ public class JFrameTimeKeep extends JFrame {
 				// TODO Auto-generated method stub
 				Toolkit toolKit = Toolkit.getDefaultToolkit();
 				toolKit.beep();
+				JFrameTimeKeep.this.setLocation(afterKeepWindowLocation);
 				
 				uiBusy = true;
 				itemKeep.setEnabled(true);
 				setMyCuteAPanelState(STATE_CHEER);
 				string = "你变的更强了！";
-				timer.schedule(new TurnToReadyTimerTask(), 10000);
-				
-				JFrameTimeKeep.this.setLocation(afterKeepWindowLocation);
+				timer.schedule(new TurnToReadyTimerTask(), 10000);				
 			}
 
 			@Override
@@ -302,7 +302,7 @@ public class JFrameTimeKeep extends JFrame {
 				uiBusy = true;
 				setMyCuteAPanelState(STATE_DIZZY);
 				string = info;
-				timer.schedule(new TurnToReadyTimerTask(), 5000);
+				timer.schedule(new TurnToReadyTimerTask(), 5000);				
 			}
 
 			public class TurnToKeepTimerTask extends TimerTask {
